@@ -23,7 +23,7 @@ Mientras que jugadores tendra la siguiente estructura
         - nombre = "Mi dispositivo"
         - posicion = [0,0.5,0]
 
-![imagen](imagenes/estructuraDB)
+![imagen](misImagenes/estructuraDB)
 
 ## Uso de la base de datos desde el script
 Crearemos un objeto vacio al que le añadiremos un script que contenga las funciones que usen la base de datos:
