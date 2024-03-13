@@ -29,6 +29,15 @@ public class PlayerController : MonoBehaviour {
         this.record = record;
     }
 
+    void Update() {
+        Vector3 posicion = transform.position;
+        Dictionary<string, object> diccionarioPosicion = new Dictionary<string, object>();
+        diccionarioPosicion["x"] = posicion.x;
+        diccionarioPosicion["y"] = posicion.y;
+        diccionarioPosicion["z"] = posicion.z;
+        realtime.UpdatePosition(diccionarioPosicion);
+    }
+
     // Update is called once per frame
     void FixedUpdate() {
         Vector3 movement = new Vector3(_movementX, 0.0f, _movementY);

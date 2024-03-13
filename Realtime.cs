@@ -182,4 +182,12 @@ public class Realtime : MonoBehaviour
     public void UpdateRecord(int scoreCount){
         _refUser.Child("Record").SetValueAsync(scoreCount);
     }
+
+    public void UpdatePosition(Dictionary<string, object> posicion){
+        _refUser.Child("posicion").SetValueAsync(posicion);
+    }
+
+    private void OnApplicationQuit() {
+        _refUser.Child("connected").SetValueAsync(false);
+    }
 }
